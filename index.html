@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Music Transposer</title>
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+   <link rel="stylesheet" href="stylesheets/style.css">
+  <script src="javascripts/modernizr.foundation.js"></script>
+</head>
+<body onload = "document.transposerInputs.reset()" id="changeBackground">
+<div class="row">
+	<div class="twelve columns centered">
+		<h1>Chord Transposer</h1>
+	</div>
+</div>
+<form name = "transposerInputs">
+	<div class = "row">
+		<div class = "twelve columns centered">
+			<div class = "box">
+				<div class="row add-padding">
+					<div class = "five columns mobile-two">
+						<span class = "form-span float-right">What is the song's key?</span> 
+					</div>
+					<div class = "two column mobile-one">
+						<input id = "inputKey" type="text" name="inputKey">
+					</div>
+					<div class = "five columns end mobile-one">
+						<input type="radio" name="mode" value="major"><span class = "form-span">Major</span>
+						<input type="radio" name="mode" value="minor"><span class = "form-span">Minor</span>
+					</div>
+				</div>
+				<div class = "row add-padding">
+					<div class = "twelve columns ">	
+						<input type="text" name="inputChords" placeholder = "Type in chords here, each separated by a comma.">
+						<p class = "chord-example">Flats Example: Cm7, F7, Bbmaj7, Ebmaj7, Am7-5, D7, Gm, F7/Ab, Bbmaj7/D</p>
+						<p class = "chord-example">Sharps Example: C#m7, F#7, Bmaj7, Emaj7, A#m7-5, D#7, G#m, F#7/A, Bmaj7/D#</p>
+					</div>
+				</div>
+				<div class = "row add-padding">
+					<div class = "five columns mobile-two">
+						<span class = "form-span float-right">Transpose by:</span>
+					</div>
+					<div class = "two column mobile-one">
+						<input type="text" name="halfSteps" placeholder = "-11 to 11">
+					</div>
+					<div class = "five columns mobile-one end">
+						<span class = "form-span">half steps.</span>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+<div class="row">
+	<div class="twelve columns">
+		<p class = "center-text"><a href="#" id="clickArea" onclick="transposeChords()">Click Here to transpose</a></p>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns">
+		<div class = "box transposed">
+			<p><span class = "transposed-key">New key: <span id="transposed-key"></span></span></p>
+			<p><span class = "transposed-chords">New chords: <br><span id="transposed-chords"></span></span></p>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="row">
+		<div class = "six columns mobile-two">
+			<p class="footer">Created by <a href="http://janmilosh.com" target="_blank">Jan Milosh</a></p>
+		</div>
+		<div class="six columns end mobile-two">
+			<p class = "right"><a href="#" id="clickArea" onclick="changeIt()">Change Background</a></p>
+		</div>
+	</div>
+</footer>
+
+<!-- Included JS Files (Compressed) -->
+<script src="javascripts/foundation.min.js"></script>
+
+<!-- Initialize JS Plugins -->
+<script src="javascripts/app.js"></script>
+<script src="javascripts/jan.js"></script>
+
+  
+</body>
+</html>
