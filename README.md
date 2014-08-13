@@ -4,4 +4,4 @@ Input comma-separated chord progression, the key and whether it is major or mino
 
 There is also a button to change the background color (random color generator).
 
-Try it out at [http://janmilosh.github.io/transposer](http://janmilosh.github.io/transposer).
+Try it out at [http://janmilosh.github.io/chord-transposer](http://janmilosh.github.io/chord-transposer).
